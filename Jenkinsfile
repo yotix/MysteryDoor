@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('Second') {
+      steps {
+        build(job: 'debater', wait: true)
+      }
+    }
+
   }
 }
